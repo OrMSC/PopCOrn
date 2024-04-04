@@ -1,0 +1,2 @@
+target,geography,seed_table,importance,control_field,expression
+num_hh,BLOCK,households,10000000,GQ_Non_Oth,households.GQFLAG == 1

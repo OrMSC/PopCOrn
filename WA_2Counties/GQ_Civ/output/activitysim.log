@@ -1,0 +1,278 @@
+03/04/2024 15:12:06 - INFO - activitysim - Read logging configuration from: configs\logging.yaml
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - SETTING configs_dir: configs
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - SETTING settings_file_name: settings.yaml
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - SETTING data_dir: data
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - SETTING output_dir: output
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - SETTING multiprocess: None
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - SETTING num_processes: None
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - SETTING resume_after: None
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - SETTING GROUP_BY_INCIDENCE_SIGNATURE: True
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - SETTING INTEGERIZE_WITH_BACKSTOPPED_CONTROLS: True
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - SETTING SUB_BALANCE_WITH_FLOAT_SEED_WEIGHTS: False
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - SETTING meta_control_data: None
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - SETTING control_file_name: GQ_controls.csv
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - SETTING USE_CVXPY: False
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - SETTING USE_SIMUL_INTEGERIZER: True
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - ENV MKL_NUM_THREADS: None
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - ENV OMP_NUM_THREADS: None
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - ENV OPENBLAS_NUM_THREADS: None
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - NUMPY blas_info libraries: ['cblas', 'blas', 'cblas', 'blas', 'cblas', 'blas']
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - NUMPY blas_opt_info libraries: ['cblas', 'blas', 'cblas', 'blas', 'cblas', 'blas']
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - NUMPY lapack_info libraries: ['lapack', 'blas', 'lapack', 'blas']
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - NUMPY lapack_opt_info libraries: ['lapack', 'blas', 'lapack', 'blas', 'cblas', 'blas', 'cblas', 'blas', 'cblas', 'blas']
+03/04/2024 15:12:06 - INFO - activitysim.cli.run - run single process simulation
+03/04/2024 15:12:06 - DEBUG - activitysim.core.random - Set random seed base to 0
+03/04/2024 15:12:06 - DEBUG - activitysim.core.pipeline - open_pipeline - new, empty pipeline
+03/04/2024 15:12:06 - DEBUG - activitysim.core.pipeline - opened pipeline_store output\pipeline.h5
+03/04/2024 15:12:06 - DEBUG - activitysim.core.pipeline - add_checkpoint init timestamp 2024-04-03 15:12:06.795025
+03/04/2024 15:12:06 - DEBUG - activitysim.core.pipeline - open_pipeline complete
+03/04/2024 15:12:06 - INFO - activitysim.core.tracing - Time to execute open_pipeline : 0.027 seconds (0.0 minutes)
+03/04/2024 15:12:06 - INFO - activitysim.core.tracing - Time to execute preload_injectables : 0.047 seconds (0.0 minutes)
+03/04/2024 15:12:06 - INFO - activitysim.core.pipeline - #run_model running step input_pre_processor
+03/04/2024 15:12:06 - INFO - populationsim.steps.input_pre_processor - Using table list: [{'tablename': 'households', 'filename': 'GQ_seed_households.csv', 'index_col': 'hh_id', 'column_map': {'hhnum': 'hh_id'}}, {'tablename': 'persons', 'filename': 'GQ_seed_persons.csv', 'column_map': {'hhnum': 'hh_id', 'SPORDER': 'per_num'}, 'drop_columns': None}, {'tablename': 'geo_cross_walk', 'filename': 'geo_cross_walk.csv'}, {'tablename': 'BLOCK_control_data', 'filename': 'DecennialBlockData_GQ.csv'}]
+03/04/2024 15:12:06 - INFO - activitysim.core.input - Reading CSV file data\GQ_seed_households.csv
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - raw households table size: (5234, 248) 10.4 MB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - renaming columns: {'hhnum': 'hh_id'}
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - households table columns: ['RT' 'SERIALNO' 'DIVISION' 'PUMA' 'PUMA20' 'REGION' 'ST' 'ADJHSG'
+ 'ADJINC' 'WGTP' 'NP' 'TYPE' 'ACCESSINET' 'ACR' 'AGS' 'BATH' 'BDSP' 'BLD'
+ 'BROADBND' 'COMPOTHX' 'CONP' 'DIALUP' 'ELEFP' 'ELEP' 'FS' 'FULFP' 'FULP'
+ 'GASFP' 'GASP' 'HFL' 'HISPEED' 'HOTWAT' 'INSP' 'LAPTOP' 'MHP' 'MRGI'
+ 'MRGP' 'MRGT' 'MRGX' 'OTHSVCEX' 'REFR' 'RMSP' 'RNTM' 'RNTP' 'RWAT'
+ 'RWATPR' 'SATELLITE' 'SINK' 'SMARTPHONE' 'SMP' 'STOV' 'TABLET' 'TEL'
+ 'TEN' 'VACS' 'VALP' 'VEH' 'WATFP' 'WATP' 'YRBLT' 'CPLT' 'FINCP' 'FPARC'
+ 'GRNTP' 'GRPIP' 'HHL' 'HHLANP' 'HHLDRAGEP' 'HHLDRHISP' 'HHLDRRAC1P' 'HHT'
+ 'HHT2' 'HINCP' 'HUGCL' 'HUPAC' 'HUPAOC' 'HUPARC' 'KIT' 'LNGI' 'MULTG'
+ 'MV' 'NOC' 'NPF' 'NPP' 'NR' 'NRC' 'OCPIP' 'PARTNER' 'PLM' 'PLMPRP' 'PSF'
+ 'R18' 'R60' 'R65' 'RESMODE' 'SMOCP' 'SMX' 'SRNT' 'SVAL' 'TAXAMT' 'WIF'
+ 'WKEXREL' 'WORKSTAT' 'FACCESSP' 'FACRP' 'FAGSP' 'FBATHP' 'FBDSP' 'FBLDP'
+ 'FBROADBNDP' 'FCOMPOTHXP' 'FCONP' 'FDIALUPP' 'FELEP' 'FFINCP' 'FFSP'
+ 'FFULP' 'FGASP' 'FGRNTP' 'FHFLP' 'FHINCP' 'FHISPEEDP' 'FHOTWATP' 'FINSP'
+ 'FKITP' 'FLAPTOPP' 'FMHP' 'FMRGIP' 'FMRGP' 'FMRGTP' 'FMRGXP' 'FMVP'
+ 'FOTHSVCEXP' 'FPLMP' 'FPLMPRP' 'FREFRP' 'FRMSP' 'FRNTMP' 'FRNTP' 'FRWATP'
+ 'FRWATPRP' 'FSATELLITEP' 'FSINKP' 'FSMARTPHONP' 'FSMOCP' 'FSMP' 'FSMXHP'
+ 'FSMXSP' 'FSTOVP' 'FTABLETP' 'FTAXP' 'FTELP' 'FTENP' 'FVACSP' 'FVALP'
+ 'FVEHP' 'FWATP' 'FYRBLTP' 'WGTP1' 'WGTP2' 'WGTP3' 'WGTP4' 'WGTP5' 'WGTP6'
+ 'WGTP7' 'WGTP8' 'WGTP9' 'WGTP10' 'WGTP11' 'WGTP12' 'WGTP13' 'WGTP14'
+ 'WGTP15' 'WGTP16' 'WGTP17' 'WGTP18' 'WGTP19' 'WGTP20' 'WGTP21' 'WGTP22'
+ 'WGTP23' 'WGTP24' 'WGTP25' 'WGTP26' 'WGTP27' 'WGTP28' 'WGTP29' 'WGTP30'
+ 'WGTP31' 'WGTP32' 'WGTP33' 'WGTP34' 'WGTP35' 'WGTP36' 'WGTP37' 'WGTP38'
+ 'WGTP39' 'WGTP40' 'WGTP41' 'WGTP42' 'WGTP43' 'WGTP44' 'WGTP45' 'WGTP46'
+ 'WGTP47' 'WGTP48' 'WGTP49' 'WGTP50' 'WGTP51' 'WGTP52' 'WGTP53' 'WGTP54'
+ 'WGTP55' 'WGTP56' 'WGTP57' 'WGTP58' 'WGTP59' 'WGTP60' 'WGTP61' 'WGTP62'
+ 'WGTP63' 'WGTP64' 'WGTP65' 'WGTP66' 'WGTP67' 'WGTP68' 'WGTP69' 'WGTP70'
+ 'WGTP71' 'WGTP72' 'WGTP73' 'WGTP74' 'WGTP75' 'WGTP76' 'WGTP77' 'WGTP78'
+ 'WGTP79' 'WGTP80' 'GQWGTP' 'HHINCADJ' 'HTYPE' 'hhchild' 'NWESR' 'GQTYPE'
+ 'MIL' 'SCHG' 'GQFLAG']
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - households table size: (5234, 247) 10.4 MB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - households index name: hh_id
+03/04/2024 15:12:07 - INFO - populationsim.steps.input_pre_processor - registering table households
+03/04/2024 15:12:07 - INFO - activitysim.core.input - Reading CSV file data\GQ_seed_persons.csv
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - raw persons table size: (5234, 296) 12.4 MB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - renaming columns: {'hhnum': 'hh_id', 'SPORDER': 'per_num'}
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - persons table columns: ['RT' 'SERIALNO' 'DIVISION' 'per_num' 'PUMA' 'PUMA20' 'REGION' 'ST'
+ 'ADJINC' 'PWGTP' 'AGEP' 'CIT' 'CITWP' 'COW' 'DDRS' 'DEAR' 'DEYE' 'DOUT'
+ 'DPHY' 'DRAT' 'DRATX' 'DREM' 'ENG' 'FER' 'GCL' 'GCM' 'GCR' 'HINS1'
+ 'HINS2' 'HINS3' 'HINS4' 'HINS5' 'HINS6' 'HINS7' 'INTP' 'JWMNP' 'JWRIP'
+ 'JWTRNS' 'LANX' 'MAR' 'MARHD' 'MARHM' 'MARHT' 'MARHW' 'MARHYP' 'MIG'
+ 'MIL' 'MLPA' 'MLPB' 'MLPCD' 'MLPE' 'MLPFG' 'MLPH' 'MLPIK' 'MLPJ' 'NWAB'
+ 'NWAV' 'NWLA' 'NWLK' 'NWRE' 'OIP' 'PAP' 'RELSHIPP' 'RETP' 'SCH' 'SCHG'
+ 'SCHL' 'SEMP' 'SEX' 'SSIP' 'SSP' 'WAGP' 'WKHP' 'WKL' 'WKW' 'WKWN' 'WRK'
+ 'YOEP' 'ANC' 'ANC1P' 'ANC2P' 'DECADE' 'DIS' 'DRIVESP' 'ESP' 'ESR' 'FOD1P'
+ 'FOD2P' 'HICOV' 'HISP' 'INDP' 'JWAP' 'JWDP' 'LANP' 'MIGPUMA10'
+ 'MIGPUMA20' 'MIGSP' 'MSP' 'NAICSP' 'NATIVITY' 'NOP' 'OC' 'OCCP' 'PAOC'
+ 'PERNP' 'PINCP' 'POBP' 'POVPIP' 'POWPUMA10' 'POWPUMA20' 'POWSP' 'PRIVCOV'
+ 'PUBCOV' 'QTRBIR' 'RAC1P' 'RAC2P' 'RAC3P' 'RACAIAN' 'RACASN' 'RACBLK'
+ 'RACNH' 'RACNUM' 'RACPI' 'RACSOR' 'RACWHT' 'RC' 'SCIENGP' 'SCIENGRLP'
+ 'SFN' 'SFR' 'SOCP' 'VPS' 'WAOB' 'FAGEP' 'FANCP' 'FCITP' 'FCITWP' 'FCOWP'
+ 'FDDRSP' 'FDEARP' 'FDEYEP' 'FDISP' 'FDOUTP' 'FDPHYP' 'FDRATP' 'FDRATXP'
+ 'FDREMP' 'FENGP' 'FESRP' 'FFERP' 'FFODP' 'FGCLP' 'FGCMP' 'FGCRP'
+ 'FHICOVP' 'FHINS1P' 'FHINS2P' 'FHINS3C' 'FHINS3P' 'FHINS4C' 'FHINS4P'
+ 'FHINS5C' 'FHINS5P' 'FHINS6P' 'FHINS7P' 'FHISP' 'FINDP' 'FINTP' 'FJWDP'
+ 'FJWMNP' 'FJWRIP' 'FJWTRNSP' 'FLANP' 'FLANXP' 'FMARP' 'FMARHDP' 'FMARHMP'
+ 'FMARHTP' 'FMARHWP' 'FMARHYP' 'FMIGP' 'FMIGSP' 'FMILPP' 'FMILSP' 'FOCCP'
+ 'FOIP' 'FPAP' 'FPERNP' 'FPINCP' 'FPOBP' 'FPOWSP' 'FPRIVCOVP' 'FPUBCOVP'
+ 'FRACP' 'FRELSHIPP' 'FRETP' 'FSCHGP' 'FSCHLP' 'FSCHP' 'FSEMP' 'FSEXP'
+ 'FSSIP' 'FSSP' 'FWAGP' 'FWKHP' 'FWKLP' 'FWKWNP' 'FWKWP' 'FWRKP' 'FYOEP'
+ 'PWGTP1' 'PWGTP2' 'PWGTP3' 'PWGTP4' 'PWGTP5' 'PWGTP6' 'PWGTP7' 'PWGTP8'
+ 'PWGTP9' 'PWGTP10' 'PWGTP11' 'PWGTP12' 'PWGTP13' 'PWGTP14' 'PWGTP15'
+ 'PWGTP16' 'PWGTP17' 'PWGTP18' 'PWGTP19' 'PWGTP20' 'PWGTP21' 'PWGTP22'
+ 'PWGTP23' 'PWGTP24' 'PWGTP25' 'PWGTP26' 'PWGTP27' 'PWGTP28' 'PWGTP29'
+ 'PWGTP30' 'PWGTP31' 'PWGTP32' 'PWGTP33' 'PWGTP34' 'PWGTP35' 'PWGTP36'
+ 'PWGTP37' 'PWGTP38' 'PWGTP39' 'PWGTP40' 'PWGTP41' 'PWGTP42' 'PWGTP43'
+ 'PWGTP44' 'PWGTP45' 'PWGTP46' 'PWGTP47' 'PWGTP48' 'PWGTP49' 'PWGTP50'
+ 'PWGTP51' 'PWGTP52' 'PWGTP53' 'PWGTP54' 'PWGTP55' 'PWGTP56' 'PWGTP57'
+ 'PWGTP58' 'PWGTP59' 'PWGTP60' 'PWGTP61' 'PWGTP62' 'PWGTP63' 'PWGTP64'
+ 'PWGTP65' 'PWGTP66' 'PWGTP67' 'PWGTP68' 'PWGTP69' 'PWGTP70' 'PWGTP71'
+ 'PWGTP72' 'PWGTP73' 'PWGTP74' 'PWGTP75' 'PWGTP76' 'PWGTP77' 'PWGTP78'
+ 'PWGTP79' 'PWGTP80' 'GQTYPE' 'gqwgtp' 'GQFLAG' 'employed' 'soc' 'hh_id']
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - persons table size: (5234, 296) 12.4 MB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - persons index name: None
+03/04/2024 15:12:07 - INFO - populationsim.steps.input_pre_processor - registering table persons
+03/04/2024 15:12:07 - INFO - activitysim.core.input - Reading CSV file data\geo_cross_walk.csv
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - raw geo_cross_walk table size: (165, 5) 6.7 KB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - geo_cross_walk table columns: ['BLOCK' 'BG' 'TRACT' 'PUMA' 'REGION']
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - geo_cross_walk table size: (165, 5) 6.7 KB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - geo_cross_walk index name: None
+03/04/2024 15:12:07 - INFO - populationsim.steps.input_pre_processor - registering table geo_cross_walk
+03/04/2024 15:12:07 - INFO - activitysim.core.input - Reading CSV file data\DecennialBlockData_GQ.csv
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - raw BLOCK_control_data table size: (165, 12) 16.0 KB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - BLOCK_control_data table columns: ['BLOCK' 'NAME' 'GQ_HH' 'GQ_Inst' 'GQ_Inst_Cor' 'GQ_Inst_Juv'
+ 'GQ_Inst_Nur' 'GQ_Inst_Oth' 'GQ_Non' 'GQ_Non_Uni' 'GQ_Non_Mil'
+ 'GQ_Non_Oth']
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - BLOCK_control_data table size: (165, 12) 16.0 KB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.input - BLOCK_control_data index name: None
+03/04/2024 15:12:07 - INFO - populationsim.steps.input_pre_processor - registering table BLOCK_control_data
+03/04/2024 15:12:07 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'input_pre_processor' : 0.406 seconds (0.0 minutes)
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - add_checkpoint input_pre_processor timestamp 2024-04-03 15:12:07.357251
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - add_checkpoint 'input_pre_processor' table 'households' (5234, 247) 10.4 MB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - add_checkpoint 'input_pre_processor' table 'persons' (5234, 296) 12.4 MB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - add_checkpoint 'input_pre_processor' table 'geo_cross_walk' (165, 5) 6.7 KB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - add_checkpoint 'input_pre_processor' table 'BLOCK_control_data' (165, 12) 16.0 KB
+03/04/2024 15:12:07 - INFO - activitysim.core.pipeline - #run_model running step setup_data_structures
+03/04/2024 15:12:07 - INFO - populationsim.steps.setup_data_structures - Reading control file configs\GQ_controls.csv
+03/04/2024 15:12:07 - INFO - populationsim.steps.setup_data_structures - dropped 4879 households not in seed zones
+03/04/2024 15:12:07 - INFO - populationsim.steps.setup_data_structures - kept 355 households in seed zones
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - rewrap table households inplace=False
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - rewrap table persons inplace=False
+03/04/2024 15:12:07 - INFO - populationsim.steps.setup_data_structures - control target num_hh
+03/04/2024 15:12:07 - DEBUG - populationsim.steps.setup_data_structures - control_row.seed_table households
+03/04/2024 15:12:07 - DEBUG - populationsim.steps.setup_data_structures - control_row.expression households.GQFLAG == 1
+03/04/2024 15:12:07 - INFO - populationsim.steps.setup_data_structures - grouped incidence table has 5 entries, ungrouped has 355
+03/04/2024 15:12:07 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'setup_data_structures' : 0.094 seconds (0.0 minutes)
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - add_checkpoint setup_data_structures timestamp 2024-04-03 15:12:07.685905
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - add_checkpoint 'setup_data_structures' table 'crosswalk' (165, 3) 4.1 KB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - add_checkpoint 'setup_data_structures' table 'control_spec' (1, 6) 176 B
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - add_checkpoint 'setup_data_structures' table 'REGION_controls' (5, 1) 80 B
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - add_checkpoint 'setup_data_structures' table 'PUMA_controls' (5, 1) 80 B
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - add_checkpoint 'setup_data_structures' table 'BLOCK_controls' (165, 1) 2.6 KB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - add_checkpoint 'setup_data_structures' table 'households' (355, 247) 704.3 KB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - add_checkpoint 'setup_data_structures' table 'persons' (5234, 296) 12.4 MB
+03/04/2024 15:12:07 - DEBUG - activitysim.core.pipeline - add_checkpoint 'setup_data_structures' table 'household_groups' (355, 3) 8.5 KB
+03/04/2024 15:12:08 - DEBUG - activitysim.core.pipeline - add_checkpoint 'setup_data_structures' table 'incidence_table' (5, 6) 348 B
+03/04/2024 15:12:08 - INFO - activitysim.core.pipeline - #run_model running step initial_seed_balancing
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - initial_seed_balancing seed id 11101
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - seed_balancer status: {'converged': True, 'iter': 2, 'delta': 0.0, 'max_gamma_dif': 0.0}
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - Total balanced weights for seed 11101 = 862.999990495295
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - initial_seed_balancing seed id 11102
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - seed_balancer status: {'converged': True, 'iter': 2, 'delta': 1.1368683772161603e-13, 'max_gamma_dif': 2.220446049250313e-16}
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - Total balanced weights for seed 11102 = 406.9999878556844
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - initial_seed_balancing seed id 11103
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - seed_balancer status: {'converged': True, 'iter': 2, 'delta': 5.684341886080802e-14, 'max_gamma_dif': 2.220446049250313e-16}
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - Total balanced weights for seed 11103 = 287.9999961542963
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - initial_seed_balancing seed id 11104
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - seed_balancer status: {'converged': True, 'iter': 2, 'delta': 0.0, 'max_gamma_dif': 0.0}
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - Total balanced weights for seed 11104 = 237.0000015483054
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - initial_seed_balancing seed id 11000
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - seed_balancer status: {'converged': True, 'iter': 2, 'delta': 0.0, 'max_gamma_dif': 0.0}
+03/04/2024 15:12:08 - INFO - populationsim.steps.initial_seed_balancing - Total balanced weights for seed 11000 = 444.00001186383616
+03/04/2024 15:12:08 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'initial_seed_balancing' : 0.031 seconds (0.0 minutes)
+03/04/2024 15:12:08 - DEBUG - activitysim.core.pipeline - add_checkpoint initial_seed_balancing timestamp 2024-04-03 15:12:08.472430
+03/04/2024 15:12:08 - DEBUG - activitysim.core.pipeline - add_checkpoint 'initial_seed_balancing' table 'PUMA_weights' (5, 4) 288 B
+03/04/2024 15:12:08 - INFO - activitysim.core.pipeline - #run_model running step meta_control_factoring
+03/04/2024 15:12:08 - WARNING - populationsim.steps.meta_control_factoring - meta_control_factoring: no meta targets so nothing to do
+03/04/2024 15:12:08 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'meta_control_factoring' : 0.0 seconds (0.0 minutes)
+03/04/2024 15:12:08 - DEBUG - activitysim.core.pipeline - add_checkpoint meta_control_factoring timestamp 2024-04-03 15:12:08.638735
+03/04/2024 15:12:08 - INFO - activitysim.core.pipeline - #run_model running step final_seed_balancing
+03/04/2024 15:12:08 - WARNING - populationsim.steps.final_seed_balancing - no need for final_seed_balancing because no meta controls
+03/04/2024 15:12:08 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'final_seed_balancing' : 0.0 seconds (0.0 minutes)
+03/04/2024 15:12:08 - DEBUG - activitysim.core.pipeline - add_checkpoint final_seed_balancing timestamp 2024-04-03 15:12:08.779476
+03/04/2024 15:12:08 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_weights inplace=True
+03/04/2024 15:12:08 - DEBUG - activitysim.core.pipeline - add_checkpoint 'final_seed_balancing' table 'PUMA_weights' (5, 5) 328 B
+03/04/2024 15:12:08 - INFO - activitysim.core.pipeline - #run_model running step integerize_final_seed_weights
+03/04/2024 15:12:08 - INFO - populationsim.steps.integerize_final_seed_weights - integerize_final_seed_weights seed id 11101
+03/04/2024 15:12:08 - DEBUG - populationsim.integerizer - Integerizer: 0 out of 1 different from round
+03/04/2024 15:12:08 - DEBUG - populationsim.integerizer - Integerizer status for unbackstopped PUMA_11101: OPTIMAL
+03/04/2024 15:12:08 - INFO - populationsim.steps.integerize_final_seed_weights - integerize_final_seed_weights seed id 11102
+03/04/2024 15:12:08 - DEBUG - populationsim.integerizer - Integerizer: 0 out of 1 different from round
+03/04/2024 15:12:08 - DEBUG - populationsim.integerizer - Integerizer status for unbackstopped PUMA_11102: OPTIMAL
+03/04/2024 15:12:08 - INFO - populationsim.steps.integerize_final_seed_weights - integerize_final_seed_weights seed id 11103
+03/04/2024 15:12:08 - DEBUG - populationsim.integerizer - Integerizer: 0 out of 1 different from round
+03/04/2024 15:12:08 - DEBUG - populationsim.integerizer - Integerizer status for unbackstopped PUMA_11103: OPTIMAL
+03/04/2024 15:12:08 - INFO - populationsim.steps.integerize_final_seed_weights - integerize_final_seed_weights seed id 11104
+03/04/2024 15:12:08 - DEBUG - populationsim.integerizer - Integerizer: 0 out of 1 different from round
+03/04/2024 15:12:08 - DEBUG - populationsim.integerizer - Integerizer status for unbackstopped PUMA_11104: OPTIMAL
+03/04/2024 15:12:08 - INFO - populationsim.steps.integerize_final_seed_weights - integerize_final_seed_weights seed id 11000
+03/04/2024 15:12:08 - DEBUG - populationsim.integerizer - Integerizer: 0 out of 1 different from round
+03/04/2024 15:12:08 - DEBUG - populationsim.integerizer - Integerizer status for unbackstopped PUMA_11000: OPTIMAL
+03/04/2024 15:12:08 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'integerize_final_seed_weights' : 0.094 seconds (0.0 minutes)
+03/04/2024 15:12:09 - DEBUG - activitysim.core.pipeline - add_checkpoint integerize_final_seed_weights timestamp 2024-04-03 15:12:09.029478
+03/04/2024 15:12:09 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_weights inplace=True
+03/04/2024 15:12:09 - DEBUG - activitysim.core.pipeline - add_checkpoint 'integerize_final_seed_weights' table 'PUMA_weights' (5, 6) 368 B
+03/04/2024 15:12:09 - INFO - activitysim.core.pipeline - #run_model running step sub_balancing
+03/04/2024 15:12:09 - INFO - populationsim.steps.sub_balancing - balancing 1/1 seed 11101, PUMA 11101
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - 1 positive weight rows out of 1
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 1 control_count 1 zone_count 67
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.3092638912203256e-14 max_gamma_dif 2.220446049250313e-16
+03/04/2024 15:12:09 - DEBUG - populationsim.steps.sub_balancing - PUMA 11101 converged True iter 0
+03/04/2024 15:12:09 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+03/04/2024 15:12:09 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for PUMA_11101 status OPTIMAL. 
+03/04/2024 15:12:09 - INFO - populationsim.steps.sub_balancing - balancing 1/1 seed 11102, PUMA 11102
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - 1 positive weight rows out of 1
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 1 control_count 1 zone_count 32
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.4210854715202004e-14 max_gamma_dif 2.220446049250313e-16
+03/04/2024 15:12:09 - DEBUG - populationsim.steps.sub_balancing - PUMA 11102 converged True iter 0
+03/04/2024 15:12:09 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+03/04/2024 15:12:09 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for PUMA_11102 status OPTIMAL. 
+03/04/2024 15:12:09 - INFO - populationsim.steps.sub_balancing - balancing 1/1 seed 11103, PUMA 11103
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - 1 positive weight rows out of 1
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 1 control_count 1 zone_count 37
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+03/04/2024 15:12:09 - DEBUG - populationsim.steps.sub_balancing - PUMA 11103 converged True iter 0
+03/04/2024 15:12:09 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+03/04/2024 15:12:09 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for PUMA_11103 status OPTIMAL. 
+03/04/2024 15:12:09 - INFO - populationsim.steps.sub_balancing - balancing 1/1 seed 11104, PUMA 11104
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - 1 positive weight rows out of 1
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 1 control_count 1 zone_count 26
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 5.329070518200751e-15 max_gamma_dif 1.1102230246251565e-16
+03/04/2024 15:12:09 - DEBUG - populationsim.steps.sub_balancing - PUMA 11104 converged True iter 0
+03/04/2024 15:12:09 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+03/04/2024 15:12:09 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for PUMA_11104 status OPTIMAL. 
+03/04/2024 15:12:09 - INFO - populationsim.steps.sub_balancing - balancing 1/1 seed 11000, PUMA 11000
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - 1 positive weight rows out of 1
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 1 control_count 1 zone_count 3
+03/04/2024 15:12:09 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+03/04/2024 15:12:09 - DEBUG - populationsim.steps.sub_balancing - PUMA 11000 converged True iter 0
+03/04/2024 15:12:09 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+03/04/2024 15:12:09 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for PUMA_11000 status OPTIMAL. 
+03/04/2024 15:12:09 - INFO - populationsim.steps.sub_balancing - adding table BLOCK_weights
+03/04/2024 15:12:09 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'sub_balancing.geography=BLOCK' : 0.42 seconds (0.0 minutes)
+03/04/2024 15:12:09 - DEBUG - activitysim.core.pipeline - add_checkpoint sub_balancing.geography=BLOCK timestamp 2024-04-03 15:12:09.622760
+03/04/2024 15:12:09 - DEBUG - activitysim.core.pipeline - add_checkpoint 'sub_balancing.geography=BLOCK' table 'BLOCK_weights' (165, 6) 8.6 KB
+03/04/2024 15:12:09 - DEBUG - activitysim.core.pipeline - add_checkpoint 'sub_balancing.geography=BLOCK' table 'BLOCK_weights_sparse' (165, 6) 8.6 KB
+03/04/2024 15:12:09 - INFO - activitysim.core.pipeline - #run_model running step expand_households
+03/04/2024 15:12:09 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'expand_households' : 0.079 seconds (0.0 minutes)
+03/04/2024 15:12:09 - DEBUG - activitysim.core.pipeline - add_checkpoint expand_households timestamp 2024-04-03 15:12:09.857915
+03/04/2024 15:12:09 - DEBUG - activitysim.core.pipeline - add_checkpoint 'expand_households' table 'expanded_household_ids' (2239, 3) 62.7 KB
+03/04/2024 15:12:09 - INFO - activitysim.core.pipeline - #run_model running step summarize
+03/04/2024 15:12:09 - INFO - populationsim.steps.summarize - saving summary table summary_REGION_2
+03/04/2024 15:12:09 - INFO - populationsim.steps.summarize - saving summary table summary_REGION_4
+03/04/2024 15:12:09 - INFO - populationsim.steps.summarize - saving summary table summary_REGION_1
+03/04/2024 15:12:09 - INFO - populationsim.steps.summarize - saving summary table summary_REGION_3
+03/04/2024 15:12:10 - INFO - populationsim.steps.summarize - saving summary table summary_REGION_5
+03/04/2024 15:12:10 - INFO - populationsim.steps.summarize - saving summary table summary_BLOCK_aggregate
+03/04/2024 15:12:10 - INFO - populationsim.steps.summarize - saving summary table summary_BLOCK_PUMA
+03/04/2024 15:12:10 - INFO - populationsim.steps.summarize - saving summary table summary_BLOCK
+03/04/2024 15:12:10 - INFO - populationsim.steps.summarize - saving summary table summary_hh_weights
+03/04/2024 15:12:10 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'summarize' : 0.187 seconds (0.0 minutes)
+03/04/2024 15:12:10 - DEBUG - activitysim.core.pipeline - add_checkpoint summarize timestamp 2024-04-03 15:12:10.201725
+03/04/2024 15:12:10 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_REGION_2' (1, 6) 56 B
+03/04/2024 15:12:10 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_REGION_4' (1, 6) 56 B
+03/04/2024 15:12:10 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_REGION_1' (1, 6) 56 B
+03/04/2024 15:12:10 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_REGION_3' (1, 6) 56 B
+03/04/2024 15:12:10 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_REGION_5' (1, 6) 56 B
+03/04/2024 15:12:10 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_BLOCK_aggregate' (5, 7) 300 B
+03/04/2024 15:12:10 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_BLOCK_PUMA' (5, 5) 220 B
+03/04/2024 15:12:10 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_BLOCK' (165, 5) 7.3 KB
+03/04/2024 15:12:10 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_hh_weights' (5, 4) 268 B
+03/04/2024 15:12:10 - INFO - activitysim.core.pipeline - #run_model running step write_tables
+03/04/2024 15:12:10 - WARNING - activitysim.core.steps.output - Skipping 'summary_MAZ_PUMA': Table not found.
+03/04/2024 15:12:10 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'write_tables' : 0.059 seconds (0.0 minutes)
+03/04/2024 15:12:10 - DEBUG - activitysim.core.pipeline - add_checkpoint write_tables timestamp 2024-04-03 15:12:10.497801
+03/04/2024 15:12:10 - INFO - activitysim.core.pipeline - #run_model running step write_synthetic_population
+03/04/2024 15:12:10 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'write_synthetic_population' : 0.141 seconds (0.0 minutes)
+03/04/2024 15:12:10 - DEBUG - activitysim.core.pipeline - add_checkpoint write_synthetic_population timestamp 2024-04-03 15:12:10.795456
+03/04/2024 15:12:10 - INFO - activitysim.core.tracing - Time to execute run_model (11 models) : 4.02 seconds (0.1 minutes)
+03/04/2024 15:12:10 - DEBUG - activitysim.core.pipeline - close_pipeline
+03/04/2024 15:12:10 - INFO - activitysim.core.mem - MainProcess high water mark rss: 137_064_448 (137.1 MB) timestamp: 03/04/2024 15:12:07 label:pipeline.run_model setup_data_structures start
+03/04/2024 15:12:10 - INFO - activitysim.core.mem - MainProcess high water mark uss: 104_189_952 (104.2 MB) timestamp: 03/04/2024 15:12:07 label:pipeline.run after input_pre_processor
+03/04/2024 15:12:10 - INFO - activitysim.core.tracing - Time to execute all models : 4.21 seconds (0.1 minutes)
