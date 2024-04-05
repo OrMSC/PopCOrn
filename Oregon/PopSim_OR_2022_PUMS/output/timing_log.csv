@@ -1,0 +1,13 @@
+process_name,model_name,seconds,minutes
+MainProcess,input_pre_processor,17.4,0.3
+MainProcess,setup_data_structures,12.9,0.2
+MainProcess,initial_seed_balancing,93.9,1.6
+MainProcess,final_seed_balancing,0.2,0.0
+MainProcess,integerize_final_seed_weights,8.1,0.1
+MainProcess,sub_balancing.geography=TRACT,3597.5,60.0
+MainProcess,sub_balancing.geography=BG,5666.5,94.4
+MainProcess,sub_balancing.geography=BLOCK,3302.6,55.0
+MainProcess,expand_households,51.8,0.9
+MainProcess,summarize,6770.2,112.8
+MainProcess,write_tables,16.7,0.3
+MainProcess,write_synthetic_population,109.5,1.8

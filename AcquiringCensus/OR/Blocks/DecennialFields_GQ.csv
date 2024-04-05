@@ -1,0 +1,11 @@
+UniqueID,Label,ShortName
+P5_001N, !!Total:,GQ_HH
+P5_002N, !!Total:!!Institutionalized population:,GQ_Inst
+P5_003N, !!Total:!!Institutionalized population:!!Correctional facilities for adults,GQ_Inst_Cor
+P5_004N, !!Total:!!Institutionalized population:!!Juvenile facilities,GQ_Inst_Juv
+P5_005N, !!Total:!!Institutionalized population:!!Nursing facilities/Skilled-nursing facilities,GQ_Inst_Nur
+P5_006N, !!Total:!!Institutionalized population:!!Other institutional facilities,GQ_Inst_Oth
+P5_007N, !!Total:!!Noninstitutionalized population:,GQ_Non
+P5_008N, !!Total:!!Noninstitutionalized population:!!College/University student housing,GQ_Non_Uni
+P5_009N, !!Total:!!Noninstitutionalized population:!!Military quarters,GQ_Non_Mil
+P5_010N, !!Total:!!Noninstitutionalized population:!!Other noninstitutional facilities,GQ_Non_Oth

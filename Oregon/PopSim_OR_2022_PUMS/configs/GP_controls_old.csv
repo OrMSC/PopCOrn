@@ -1,0 +1,56 @@
+target,geography,seed_table,importance,control_field,expression
+num_hh,BLOCK,households,1000000000,HH_Occ,(households.WGTP > 0) & (households.WGTP < np.inf)
+hh_by_type_sf,BG,households,1000,HHSF,households.BLD == 2
+hh_by_type_sfa,BG,households,1000,HHSFA,households.BLD == 3
+hh_by_type_dup,BG,households,1000,HHDUP,households.BLD == 4
+hh_by_type_mf4,BG,households,1000,HHMF4,households.BLD == 5
+hh_by_type_mf9,BG,households,1000,HHMF9,households.BLD == 6
+hh_by_type_mf19,BG,households,1000,HHMF19,households.BLD == 7
+hh_by_type_mf49,BG,households,1000,HHMF49,households.BLD == 8
+hh_by_type_mf50,BG,households,1000,HHMF50,households.BLD == 9
+hh_by_type_mh,BG,households,1000,HHMH,households.BLD == 1
+hh_by_type_rv,BG,households,1000,HHRV,households.BLD == 10
+hh_size_1,BG,households,1000,HHS1,households.NP==1
+hh_size_2,BG,households,1000,HHS2,households.NP==2
+hh_size_3,BG,households,1000,HHS3,households.NP==3
+hh_size_4,BG,households,1000,HHS4,households.NP==4
+hh_size_5,BG,households,1000,HHS5,households.NP==5
+hh_size_6,BG,households,1000,HHS6,households.NP==6
+hh_size_7,BG,households,1000,HHS7,households.NP>7
+hh_inc_1,BG,households,1000,HHINC1,(households.HHINCADJ > -999999999) & (households.HHINCADJ < 15000)
+hh_inc_2,BG,households,1000,HHINC2,(households.HHINCADJ >=15000) & (households.HHINCADJ < 25000)
+hh_inc_3,BG,households,1000,HHINC3,(households.HHINCADJ >= 25000) & (households.HHINCADJ < 35000)
+hh_inc_4,BG,households,1000,HHINC4,(households.HHINCADJ >= 35000) & (households.HHINCADJ < 50000)
+hh_inc_5,BG,households,1000,HHINC5,(households.HHINCADJ >= 50000) & (households.HHINCADJ < 75000)
+hh_inc_6,BG,households,1000,HHINC6,(households.HHINCADJ >= 75000) & (households.HHINCADJ < 100000)
+hh_inc_7,BG,households,1000,HHINC7,(households.HHINCADJ >= 100000) & (households.HHINCADJ < 150000)
+hh_inc_8,BG,households,1000,HHINC8,(households.HHINCADJ >= 150000) & (households.HHINCADJ < 200000)
+hh_inc_9,BG,households,1000,HHINC9,(households.HHINCADJ >= 200000) & (households.HHINCADJ < 9999999999)
+hhkid,BG,households,1000,HHKID,households.hhchild==2
+hh_veh_0,BG,households,1000,HHV0,households.VEH==0
+hh_veh_1,BG,households,1000,HHV1,households.VEH==1
+hh_veh_2,BG,households,1000,HHV2,households.VEH==2
+hh_veh_3,BG,households,1000,HHV3,households.VEH==3
+hh_veh_4,BG,households,1000,HHV4,households.VEH==4
+hh_veh_5,BG,households,1000,HHV5,households.VEH>=5
+hh_age_1,BG,persons,1000,AGE1,(persons.AGEP>=0) & (persons.AGEP<5) 
+hh_age_2,BG,persons,1000,AGE2,(persons.AGEP>=5) & (persons.AGEP<=9) 
+hh_age_3,BG,persons,1000,AGE3,(persons.AGEP>=10) & (persons.AGEP<=14)
+hh_age_4,BG,persons,1000,AGE4,(persons.AGEP>=15) & (persons.AGEP<=17) 
+hh_age_5,BG,persons,1000,AGE5,(persons.AGEP>=18) & (persons.AGEP<=24)
+hh_age_6,BG,persons,1000,AGE6,(persons.AGEP>=25) & (persons.AGEP<=34) 
+hh_age_7,BG,persons,1000,AGE7,(persons.AGEP>=35) & (persons.AGEP<=44) 
+hh_age_8,BG,persons,1000,AGE8,(persons.AGEP>=45) & (persons.AGEP<=54) 
+hh_age_9,BG,persons,1000,AGE9,(persons.AGEP>=55) & (persons.AGEP<=64)
+hh_age_10,BG,persons,1000,AGE10,(persons.AGEP>=65) & (persons.AGEP<=74)
+hh_age_11,BG,persons,1000,AGE11,(persons.AGEP>=75) & (persons.AGEP<=84)
+hh_age_12,BG,persons,1000,AGE12,(persons.AGEP>=85)
+persons_occ_1,TRACT,persons,100,OCCP_1,persons.OCCP == 1
+persons_occ_2,TRACT,persons,100,OCCP_2, (persons.OCCP == 2) | (persons.OCCP == 3)
+persons_occ_4,TRACT,persons,100,OCCP_4,persons.OCCP == 4
+persons_occ_5,TRACT,persons,100,OCCP_5,persons.OCCP == 5
+persons_occ_6,TRACT,persons,100,OCCP_6,persons.OCCP == 6
+hh_wrks_0,TRACT,households,100,W0,households.NWESR == 0
+hh_wrks_1,TRACT,households,100,W1,households.NWESR == 1
+hh_wrks_2,TRACT,households,100,W2,households.NWESR == 2
+hh_wrks_3_plus,TRACT,households,100,W3,households.NWESR>=3

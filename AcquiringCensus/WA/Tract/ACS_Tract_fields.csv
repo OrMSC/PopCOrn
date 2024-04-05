@@ -1,0 +1,13 @@
+ACSOrder,UniqueID,TableName,Description,ShortName
+,B08202_001,Estimate!!Total:,HOUSEHOLD SIZE BY NUMBER OF WORKERS IN HOUSEHOLD,POPW
+,B08202_002,Estimate!!Total:!!No workers,HOUSEHOLD SIZE BY NUMBER OF WORKERS IN HOUSEHOLD,W0
+,B08202_003,Estimate!!Total:!!1 worker,HOUSEHOLD SIZE BY NUMBER OF WORKERS IN HOUSEHOLD,W1
+,B08202_004,Estimate!!Total:!!2 workers,HOUSEHOLD SIZE BY NUMBER OF WORKERS IN HOUSEHOLD,W2
+,B08202_005,Estimate!!Total:!!3 or more workers,HOUSEHOLD SIZE BY NUMBER OF WORKERS IN HOUSEHOLD,W3
+,B08124_001,Estimate!!Total:,MEANS OF TRANSPORTATION TO WORK BY OCCUPATION,OCCP
+,B08124_002,"Estimate!!Total:!!Management, business, science, and arts occupations",MEANS OF TRANSPORTATION TO WORK BY OCCUPATION,OCCP_1
+,B08124_003,Estimate!!Total:!!Service occupations,MEANS OF TRANSPORTATION TO WORK BY OCCUPATION,OCCP_2
+,B08124_004,Estimate!!Total:!!Sales and office occupations,MEANS OF TRANSPORTATION TO WORK BY OCCUPATION,OCCP_3
+,B08124_005,"Estimate!!Total:!!Natural resources, construction, and maintenance occupations",MEANS OF TRANSPORTATION TO WORK BY OCCUPATION,OCCP_4
+,B08124_006,"Estimate!!Total:!!Production, transportation, and material moving occupations",MEANS OF TRANSPORTATION TO WORK BY OCCUPATION,OCCP_5
+,B08124_007,Estimate!!Total:!!Military specific occupations,MEANS OF TRANSPORTATION TO WORK BY OCCUPATION,OCCP_6

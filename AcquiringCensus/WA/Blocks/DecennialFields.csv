@@ -1,0 +1,6 @@
+UniqueID,Label,ShortName
+H1_001N, !!Total:,HH
+P1_001N, !!Total:,POP
+H1_002N, !!Total:!!Occupied,HH_Occ
+P5_002N, !!Total:!!Institutionalized population:,GQ_Inst
+P5_007N, !!Total:!!Noninstitutionalized population:,GQ_Non
